@@ -488,7 +488,7 @@ class ProjectList {
       ],
       link: "http://www.lifebefore.co.kr/samgepan/test_simulation.php",
       thumb: {
-        image: "http://www.lifebefore.co.kr/samgepan/images/samgepan_main.png",
+        image: "./images/main/samgepan_main.png",
         style: "background: radial-gradient(circle, #bf8f73, #624040)",
         imageStyle: "height:70%; width:auto;",
       },
@@ -635,7 +635,7 @@ class ProjectList {
       `,
       link: "http://www.lifebefore.co.kr",
       thumb: {
-        image: "http://www.lifebefore.co.kr/images/index_bg.png",
+        image: "./images/main/lifebefore_main.png",
         style: "background:linear-gradient(to top right,#324554,#110e25);",
       },
       workImage: [
@@ -726,7 +726,7 @@ class ProjectList {
       `,
       link: "http://www.lifebefore.co.kr/rok/townhall.php",
       thumb: {
-        image: "http://www.lifebefore.co.kr/rok/images/logo.png",
+        image: "./images/main/rokcenter_main.png",
         style: "background:#e7cf78;",
       },
       workImage: [
@@ -797,9 +797,9 @@ class ProjectList {
       ],
       link: "http://www.lifebefore.co.kr/albionnet/index.php",
       thumb: {
-        image:
-          "http://www.lifebefore.co.kr/albionnet/images/marketplace_bg.jpg",
-        imageStyle: "height:100%; width:100%; object-fit:cover;",
+        image: "./images/work/work_4/1.PNG",
+        imageStyle: " width:60%; height:100%; object-fit:cover;",
+        style: "background:#774a23;",
       },
       contentPage: `
         <div class="wk_content">
