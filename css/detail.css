@@ -1,0 +1,159 @@
+.work_back {
+  position: fixed;
+  top: 70px;
+  left: 20px;
+  background: url("../images/left-a.png") no-repeat 0 center/10px;
+  padding-left: 20px;
+  z-index: 11;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.wk_content {
+  line-height: 1.6;
+}
+.wk_content .point_cont:first-of-type {
+  margin-top: 0;
+}
+.wk_content .point_cont {
+  margin-top: 80px;
+}
+.wk_content h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.wk_content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #000;
+}
+.wk_content strong {
+  font-weight: 700;
+}
+.wk_content img {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.wk_content .gh_url {
+  margin-bottom: 40px;
+}
+.wk_content .gh_url a {
+  color: #0052ff;
+}
+.wk_content .des {
+  margin-top: 10px;
+}
+.wk_content .shoot {
+  margin-top: 20px;
+  text-decoration: underline;
+}
+.number_list {
+  counter-reset: number 0;
+  margin-top: 20px;
+}
+.number_list li {
+  position: relative;
+  padding-left: 20px;
+  margin-top: 4px;
+}
+.number_list li::before {
+  position: absolute;
+  left: 0;
+  counter-increment: number 1;
+  content: counter(number) ".";
+}
+
+.c_tv_content {
+  line-height: 1.6;
+}
+.c_tv_content .point_cont:first-of-type {
+  margin-top: 0;
+}
+.c_tv_content .point_cont {
+  margin-top: 80px;
+}
+.c_tv_content h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.c_tv_content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #000;
+}
+.c_tv_content strong {
+  font-weight: 700;
+}
+.c_tv_content img {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.c_tv_content .des {
+  margin-top: 10px;
+}
+
+.layout_view {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 12px;
+}
+.layout_view .box {
+  margin-top: 10px;
+  border: 1px solid #fff;
+  padding: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.layout_view .box:hover {
+  background: #fffed5;
+}
+.layout_view .box_description {
+  font-size: 14px;
+  line-height: 20px;
+}
+.layout_view .box_description strong {
+  font-size: 16px;
+}
+
+.compo h3 {
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+.compo ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+}
+.compo ul li {
+  padding-left: 12px;
+  position: relative;
+}
+.compo ul li::before {
+  content: "･";
+  position: absolute;
+  left: 0;
+  width: 12px;
+  text-align: center;
+}
+
+.compo ul li.in-li::before {
+  display: none;
+}
+.compo ul li ul {
+  margin-left: 20px;
+  margin-top: 0;
+}

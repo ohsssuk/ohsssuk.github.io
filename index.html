@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>오준석의 포트폴리오</title>
+
+    <meta charset="utf-8" />
+    <meta property="og:site_name" content="오준석의 포트폴리오" />
+    <meta
+      property="og:title"
+      content="안녕하세요. 오준석의 포트폴리오 입니다."
+    />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- 1200X630 -->
+    <meta property="og:image:width" content="610" />
+    <meta property="og:image:height" content="319" />
+    <meta
+      property="og:url"
+      content="http://www.lifebefore.co.kr/portfolio/index.php"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="./images/favi.jpg" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/style.css?ver=2" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./js/swiper.js"></script>
+    <script type="text/javascript" src="./js/project-list.js?ver=2"></script>
+    <script type="text/javascript" src="./js/main.js?ver=2"></script>
+
+    <script>
+      $(function () {
+        new ProjectList().main();
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" class="title">OH JUNSEOK</a>
+
+      <ul class="gnb">
+        <li onclick="gnb.click('[data-part=\'project\']')">Projects</li>
+        <li onclick="gnb.click('[data-part=\'stack\']')">Stacks</li>
+      </ul>
+    </header>
+
+    <main>
+      <div class="intro">
+        <section>
+          <h1>Web Developer</h1>
+          <h2>경험을 중시하는 개발자</h2>
+          <h3>
+            Github.
+            <a target="_blank" href="https://github.com/ohsssuk"
+              >https://github.com/ohsssuk</a
+            >
+          </h3>
+        </section>
+      </div>
+      <section class="part" data-part="project">
+        <h3 class="section_title">
+          프로젝트 & 스터디 <span class="sub"><?=count($projectData) ?></span>
+        </h3>
+        <div class="section_content">
+          <ul id="project_list_dymamic" class="project_list"></ul>
+        </div>
+      </section>
+      <section class="part" data-part="stack">
+        <h3 class="section_title">기술 스택</h3>
+        <div class="section_content stack_content">
+          <div class="row">
+            <h4>javascript, jQuery</h4>
+            <div class="stack_text">
+              <p>객체지향을 생각하고 작업합니다.</p>
+              <p>바닐라 환경에서 SPA 기능을 구현할 수 있습니다.</p>
+              <p>재사용성이 높은 기능을 모듈화 하고자 합니다.</p>
+              <p>MVC 패턴을 고민하고 적용할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="row">
+            <h4>HTML, CSS</h4>
+            <div class="stack_text">
+              <p>웹표준을 준수하는 마크업과 스타일 사용에 능숙합니다.</p>
+              <p>
+                애니메이션과 트랜지션을 사용하여 다양한 효과를 사용할 수
+                있습니다.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <h4>PHP, PHP codeIgniter</h4>
+            <div class="stack_text">
+              <p>PHP codeIgniter 프레임워크를 사용하여 개발할 수 있습니다.</p>
+              <p>MVC 패턴, 객체지향, 함수형 프로그래밍을 이해하고 있습니다.</p>
+            </div>
+          </div>
+          <div class="row">
+            <h4>mariaDB</h4>
+            <div class="stack_text">
+              <p>
+                RDB 특성을 이해하고 원하는 관계 데이터를 조회할 수 있습니다.
+              </p>
+              <p>CRUD 기능을 이해하고 작업할 수 있습니다.</p>
+              <p>서비스에 필요한 테이블 구조를 설계할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="row">
+            <h4>ElaticSearch</h4>
+            <div class="stack_text">
+              <p>
+                ES를 사용하여 캐시화, 로그 관리, 통계 조회 개발을 할 수
+                있습니다.
+              </p>
+              <p>kibana를 사용하여 원하는 데이터를 집계 조회할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="row">
+            <h4>Redis</h4>
+            <div class="stack_text">
+              <p>Redis를 사용하여 데이터를 관리할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="row">
+            <h4>Git</h4>
+            <div class="stack_text">
+              <p>Git을 활용한 형상관리, 협업 경험이 있습니다.</p>
+              <p>GitHub, bitbucket를 사용하여 프로젝트 관리 경험이 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="phone_number">(82+) 010.8758.5010</div>
+      <div class="email">ohsssuk@naver.com</div>
+    </footer>
+  </body>
+</html>
