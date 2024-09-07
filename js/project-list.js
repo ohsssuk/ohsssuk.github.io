@@ -225,6 +225,135 @@ class ProjectList {
       ],
     },
     {
+      id: 13,
+      title: "서비스 마이그레이션",
+      kind: "개인 프로젝트",
+      summary:
+        "런칭 운영중인 게이미피케이션 서비스 마이그레이션. next.js 학습 목적",
+      service:
+        "실제 서비스 개발 단계부터 next.js 마이그레이션을 염두에 두고 작업하여 런칭. SPA 동작 원리로 구현",
+      stack: [
+        { tag: "next", text: "Next.js 14" },
+        { tag: "fro", text: "typescript" },
+        { tag: "pub", text: "Tailwind CSS" },
+        { tag: "pub", text: "CSS" },
+      ],
+      link: "http://study-gamification-prod.lifebefore.co.kr",
+      thumb: {
+        image: "./images/work/work_13/bg-cn-m.png",
+        style: "background:#ff5833;",
+      },
+      contentPage: `
+          <div class="wk_content">
+              <div class="gh_url">
+                  Production. <a target="_blank" href="http://study-gamification-prod.lifebefore.co.kr/">http://study-gamification-prod.lifebefore.co.kr/</a>
+                    <br>
+                  Github. <a target="_blank" href="https://github.com/ohsssuk/study-gamification">https://github.com/ohsssuk/study-gamification</a>
+                    <br>
+                  Legacy Production. <a target="_blank" href="https://cookatmarket.com/ko/frequency/coonyang">https://cookatmarket.com/ko/frequency/coonyang</a>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>프로젝트 개요</h2>
+                  <div class="des">
+                      <strong>자사 jQuery 기반의 서비스를 Next.14(React.18), Zustand, TypeScript를 사용하여 마이그레이션.</strong>
+                      
+                      <ul class="number_list">
+                          <li>jQuery 개발에서도 서비스 특성상 SPA 동작이 적합</li>
+                          <li>레거시 환경에서도 단계별 state 변경에 따라 view 부분이 렌더링 되도록 구성</li>
+                          <li>MVC 패턴 사용</li>
+                          <li>구분된 Controller를 Component로 이관</li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>주요기능</h2>
+
+                  <div class="des">
+  
+                      <ul class="number_list">
+                          <li><strong>[스토리]</strong> : 첫 시작시 표시, 대화창을 통해 스토리 진행</li>
+                          <li><strong>[닉네임 정하기]</strong> : 첫 시작시 표시, 등록된 닉네임을 로컬에 저장(원래 기능은 DB 저장)</li>
+                          <li><strong>[튜토리얼]</strong> : 첫 시작시 표시, Main과 Touch에서 별개의 대화, 효과 필요</li>
+                          <li><strong>[터치 미션]</strong> : 클릭 효과, 터치 횟수에 따라 대화창 갱신</li>
+                          <li><strong>[메인]</strong> : 현재 미션 수행 횟수에 따라 이미지, 대화창 표시</li>
+                          <li><strong>[보상 팝업]</strong> : 일정 횟수 완료시 팝업 형태로 노출, 슬롯 애니메이션</li>
+                          <li><strong>[반복]</strong></li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>구성 & 플로우</h2>
+                  <img src="./images/work/work_13/structure.png" alt="">
+                  <div class="des">
+                      <ul class="number_list">
+                          <li>useInfoStore 조회하여 미션 수행 기록이 있는지 확인</li>
+                          <li>nowStep 의 상태 변경에 따라 전체적인 비지니스 로직을 실행</li>
+                          <li>page 비지니스 로직은 Dialog 스토어 업데이트를 통한 대화창 진행과 콜백 함수로 구성</li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>컴포넌트</h2>
+                  <br>
+                  <div class="des">
+                      <strong>스타일 관련</strong>
+                      <ul class="number_list">
+                          <li>Wrap: 관련 컴포넌트를 감싸는 래퍼</li>
+                          <li>View: 각 화면별 변동되는 스타일을 적용하기 위해 변동되는 하위 컴포넌트에 항상 포함</li>
+                      </ul>
+                  </div>
+                  <br>
+                  <div class="des">
+                      <strong>Page 구성 요소</strong>
+                      <ul class="number_list">
+                          <li>Header: 현재 잼 레벨과 상태를 표시하는 헤더 컴포넌트</li>
+                          <li>Dialog: 대화 시나리오를 렌더링하는 컴포넌트<br>-독립적으로 전역 상태에 의해 업데이트 되고 타이핑 효과와 콜백 실행</li>
+                          <li>Loading: 진행중 로딩 표시 컴포넌트</li>
+                          <li>InitLoading: 초기 1회 로딩 표시 컴포넌트</li>
+                          <li>Touch: 터치 미션을 수행하는 컴포넌트<br>-클릭 이벤트는 자체적으로 제어하고 완료, 미완료의 여부만 상위 컴포넌트로 전달</li>
+                          <li>RewardPopup: 미션 완료 후 보상을 표시하는 팝업 컴포넌트</li>
+                          <li>Conversation: 대화 화면 컴포넌트</li>
+                          <li>MakeAka: 닉네임 설정 화면</li>
+                          <li>Main: 기본 화면</li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>전역 상태</h2>
+                  <br>
+                  <div class="des">
+                      <strong>useDialogStore : 대화창 관련 store</strong>
+  
+                      <ul class="number_list">
+                          <li>시나리오(대화록) 변경시 컴포넌트 재생성하여 타이핑 효과 시작.</li>
+                          <li>시나리오(대화록), 전체 완료 콜백, set, destory</li>
+                      </ul>
+                  </div>
+                  <br>
+                  <div class="des">
+                      <strong>useInfoStore: 사용자 정보 store</strong>
+  
+                      <ul class="number_list">
+                          <li>API로 가져온 기록을 저장, 관리(프로토타입에선 API 부분을 localStorage로 대체)</li>
+                          <li>참여 여부, 닉네임, 보상 횟수, 누적 미션 완료 횟수 등</li>
+                      </ul>
+                  </div>
+              </div>
+              
+          </div>
+        `,
+      workImage: [],
+      workTask: [
+        "react 동작 원리를 유사하게 구현하기 위해 레거시 개발 단계부터 구상",
+        "마이그레이션 경험",
+      ],
+    },
+    {
       id: 12,
       title: "영어 시험 기능",
       kind: "개인 스터디",
