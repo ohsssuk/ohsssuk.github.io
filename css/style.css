@@ -276,6 +276,8 @@ section.part[data-part="stack"] {
   width: 300px;
   display: inline-block;
   vertical-align: top;
+  padding-right: 30px;
+  box-sizing: border-box;
 }
 .work_layout .title_wrap p {
   font-weight: 500;
