@@ -270,8 +270,9 @@ class ProjectList {
               <div class="point_cont">
                   <h2>주요기능</h2>
 
+                  <img src="./images/work/work_13/cn-flow.png" alt="">
+
                   <div class="des">
-  
                       <ul class="number_list">
                           <li><strong>[스토리]</strong> : 첫 시작시 표시, 대화창을 통해 스토리 진행</li>
                           <li><strong>[닉네임 정하기]</strong> : 첫 시작시 표시, 등록된 닉네임을 로컬에 저장(원래 기능은 DB 저장)</li>
