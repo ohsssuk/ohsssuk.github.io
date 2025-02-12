@@ -3,7 +3,7 @@ class ProjectList {
     {
       id: 11,
       title: "대항오 계산기",
-      kind: "개인 프로젝트(진행중)",
+      kind: "개인 프로젝트",
       summary:
         "모바일 게임 [대항해시대 오리진] 편의 기능<br>next.js 학습 목적 토이프로젝트",
       service:
@@ -16,7 +16,7 @@ class ProjectList {
       ],
       link: "https://dho-cal.lifebefore.co.kr",
       thumb: { image: "./images/work/work_11/bg_dho.png" },
-      contentPage: `
+      contentPage: /* html */ `
         <div class="wk_content">
             <div class="gh_url">
                 Production. <a target="_blank" href="https://dho-cal.lifebefore.co.kr">https://dho-cal.lifebefore.co.kr</a>
@@ -243,7 +243,7 @@ class ProjectList {
         image: "./images/work/work_13/bg-cn-m.png",
         style: "background:#ff5833;",
       },
-      contentPage: `
+      contentPage: /* html */ `
           <div class="wk_content">
               <div class="gh_url">
                   Production. <a target="_blank" href="http://study-gamification-prod.lifebefore.co.kr/">http://study-gamification-prod.lifebefore.co.kr/</a>
