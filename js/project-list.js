@@ -1,232 +1,212 @@
 class ProjectList {
   data = [
     {
-      id: 11,
-      title: "대항오 계산기",
+      id: 14,
+      title: "쿠캣 카트 기능 마이그레이션",
       kind: "개인 프로젝트",
-      summary:
-        "모바일 게임 [대항해시대 오리진] 편의 기능<br>next.js 학습 목적 토이프로젝트",
+      summary: "런칭 운영중인 카트 마이그레이션.<br /> next.js 학습 목적",
       service:
-        "유저들에게 모바일 게임 [대항해시대 오리진]에 대한 데이터와 편의 기능을 제공하는 사이트 입니다.<br>next.js 학습을 위한 토이프로젝트 입니다.",
+        "실제 서비스 개발 단계부터 next.js 마이그레이션을 염두에 두고 작업하여 런칭. SPA 동작 원리로 구현",
       stack: [
         { tag: "next", text: "Next.js 14" },
         { tag: "fro", text: "typescript" },
-        { tag: "pub", text: "Tailwind CSS" },
         { tag: "pub", text: "CSS" },
       ],
-      link: "https://dho-cal.lifebefore.co.kr",
-      thumb: { image: "./images/work/work_11/bg_dho.png" },
+      link: "https://study-cart-migration.vercel.app",
+      thumb: {
+        image: "./images/work/work_14/cm-v2-cart-thumb.png",
+        style: "background:#ff5833;",
+      },
       contentPage: /* html */ `
-        <div class="wk_content">
-            <div class="gh_url">
-                Production. <a target="_blank" href="https://dho-cal.lifebefore.co.kr">https://dho-cal.lifebefore.co.kr</a>
-                <br>
-                Github. <a target="_blank" href="https://github.com/ohsssuk/dho-cal">https://github.com/ohsssuk/dho-cal</a>
-            </div>
-            
-            <div class="point_cont">
-                <h2>컴포넌트 구조 설계</h2>
-                <div class="des">
-                    <strong>디자인 패턴 레퍼런스를 참고하여 역할과 크기에 따른 분류와 재사용성을 염두에 두고 구성하도록 노력</strong>
-                    
-                    <div class="layout_view">
-                        <div class="box" style="border-color:#4b4b4b; width:100%;">
-                            <p class="box_description" style="color:#4b4b4b">
-                                <strong>Fleet</strong><br>
-                                page의 client component 부분에 해당하는 container 역할
-                            </p>
-                            
-                            <div class="box" style="border-color:#c12727; width:100%;">
-                                <p class="box_description" style="color:#c12727">
-                                    <strong>FleetOutput</strong><br>
-                                    입력 받은 정보의 [계산, 계산 결과] 역할. 전체적인 비지니스 로직 포함
-                                </p>
-                                
-                                <div class="box" style="border-color:#155b1d; width:100%;">
-                                    <p class="box_description" style="color:#155b1d">
-                                        <strong>CommonSection x n</strong><br>
-                                        공통 섹션의 디자인 요소
-                                    </p>
-                                    
-                                    <div class="box" style="border-color:#4b0a87; width:50%">
-                                        <p class="box_description" style="color:#4b0a87">
-                                            <strong>Select(정렬 필터)</strong><br>
-                                            기본 컴포넌트 : Select
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="box" style="border-color:#c12727; width:100%;">
-                                        <p class="box_description" style="color:#c12727">
-                                            <strong>ResultTable</strong><br>
-                                            결과 단순 표시용 테이블
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="box" style="border-color:#2c53a9; width:100%;">
-                                <p class="box_description" style="color:#2c53a9">
-                                    <strong>FleetInput</strong><br>
-                                    사용자의 [입력] 역할만 담당. 전체적인 비지니스 로직 포함
-                                </p>
-                                
-                                <div class="box" style="border-color:#155b1d; width:100%;">
-                                    <p class="box_description" style="color:#155b1d">
-                                        <strong>CommonSection x n</strong><br>
-                                        공통 섹션의 디자인 요소
-                                    </p>
-                                    
-                                    <div class="box" style="border-color:#4b0a87; width:50%">
-                                        <p class="box_description" style="color:#4b0a87">
-                                            <strong>Select(정렬 필터)</strong><br>
-                                            기본 컴포넌트 : Select
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="box" style="border-color:#2c53a9; width:100%;">
-                                        <p class="box_description" style="color:#2c53a9">
-                                            <strong>ShipItemList</strong><br>
-                                            선박&부품 공통 컴포넌트의 List
-                                        </p>
-                                        
-                                    
-                                        <div class="box" style="border-color:#2c53a9; width:100%;">
-                                            <p class="box_description" style="color:#2c53a9">
-                                                <strong>ShipItem x n</strong><br>
-                                                선박&부품 공통 컴포넌트
-                                            </p>
-                                        
-                                            <div class="box" style="border-color:#4b0a87; width:50%">
-                                                <p class="box_description" style="color:#4b0a87">
-                                                    <strong>Checkbox(사용 여부 선택)</strong><br>
-                                                    기본 컴포넌트 : Checkbox
-                                                </p>
-                                            </div>
-                                            <div class="box" style="border-color:#4b0a87; width:50%">
-                                                <p class="box_description" style="color:#4b0a87">
-                                                    <strong>Input(수치 입력)</strong><br>
-                                                    기본 컴포넌트 : Input
-                                                </p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="box" style="border-color:#4b0a87; width:50%">
-                                            <p class="box_description" style="color:#4b0a87">
-                                                <strong>Button(Add ShipItem)</strong><br>
-                                                기본 컴포넌트 : Button
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                    
-                                <div class="box" style="border-color:#2c53a9; width:100%;">
-                                    <p class="box_description" style="color:#2c53a9">
-                                        <strong>BottomMenuBar</strong><br>
-                                        입력 받은 정보 전체를 계산, 저장, 초기화 하는 CTA 영역<br>
-                                        FleetInput에서 전달한 함수를 받아서 사용
-                                    </p>
-                                </div>
-                                    
-                                <div class="box" style="border:1px dashed #2c53a9; width:100%;">
-                                    <p class="box_description" style="color:#2c53a9">
-                                        <strong>Popup(입력 데이터 json 저장, 적용 역할)</strong><br>
-                                        현재 컨테이너에서 사용할 Popup
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="wk_content">
+                <div class="gh_url">
+                    Production. <a target="_blank" href="https://study-cart-migration.vercel.app">https://study-cart-migration.vercel.app</a>
+                      <br>
+                    Github. <a target="_blank" href="https://github.com/ohsssuk/study-cart-migration">https://github.com/ohsssuk/study-cart-migration</a>
+                      <br>
+                    Legacy Production. <a target="_blank" href="https://cookatmarket.com/ko/cart">https://cookatmarket.com/ko/cart</a>
+                </div>
+                
+                <div class="point_cont">
+                    <h2>프로젝트 개요</h2>
+                    <div class="des">
+                        <strong>현재 서비스의 문제점</strong>
+                        
+                        <ul class="number_list">
+                            <li>
+                                <strong>서버 렌더링(PHP)과 클라이언트 스크립트(jQuery)의 이중화</strong><br>
+                                - PHP에서 이미 UI를 렌더링했는데, jQuery가 다시 같은 요소를 조작하면서 코드 중복 발생<br>
+                                - 불필요한 DOM 조작으로 성능 저하 및 깜빡임(Flickering) 문제 발생<br>
+                            </li>
+                            <li>
+                                <strong>복잡한 코드에서 히스토리 파악이 어려움</strong><br>
+                                - 동일한 로직이 PHP와 jQuery 양쪽에 존재하면, 코드 흐름을 따라가기 어려움<br>
+                                - 특정 기능이 어디에서 변경되는지 추적하기 힘들어 유지보수 비용 증가<br>
+                            </li>
+                            <li>
+                                <strong>코드 수정시 동일한 부분의 수정이 필요하여 휴먼에러 발생 가능성 높음</strong><br>
+                                - PHP에서 UI 변경 후 jQuery 코드도 수정해야 하는 경우가 많음<br>
+                                - 한쪽만 수정하고 다른 쪽을 누락하면, UI가 예상과 다르게 동작할 수 있음<br>
+                                - 결과적으로 일관성 문제 발생 및 디버깅 시간 증가<br>
+                            </li>
+                        </ul>
                     </div>
-
-                    <ul class="number_list">
-                        <li>계산과 사용자 인터렉션에 관련된 <strong>비지니스 로직은 FleetInput, FleetOutput의 컨테이너에서만 관리</strong>하도록 설계<br>- 목적 : MVC 패턴의 Controller 역할</li>
-                        <li>기본 컴포넌트는 재사용이 가능하도록 고정적이지 않고 유연한 속성을 갖도록 설계<br>- 목적 : 디자인 시스템으로 재사용성 강화</li>
-                        <li>반복되는 디자인 요소의 표시 역할만 하는 디자인 컴포넌트 추가(CommonSection)<br>- 목적 : 디자인 시스템으로 불필요한 반복 제거</li>
-                        <li>List와 ListItem은 컨테이너에서 전달한 데이터로 단순히 화면을 render하는 목적만을 위해 사용하도록 설계<br>- 목적 : 역할별로 화면 구성을 위한 컴포넌트를 분리하여 유지/보수 효율 증가</li>
-                        <li>사용자 인터렉션이 일어나는 Fleet을 제외한 page의 다른 부분들은 서버 컴포넌트로 사용<br>- 목적 : <strong>검색 엔진 최적화 (SEO)</strong> 데이터 수집</li>
-                    </ul>
+                    <br />
+                    <div class="des">
+                        <strong>목표</strong>
+                        
+                        <ul class="number_list">
+                            <li>Next.js 14(React 18), Zustand, TypeScript를 사용하여 마이그레이션 진행</li>
+                            <li>필요한 기능을 구현하고, Next.js의 컴포넌트 및 분리된 구조, 로직을 분석</li>
+                            <li><strong>파악한 구조와 로직의 장점을 자사 jQuery 환경에서 적용</strong></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="point_cont">
-                <h2>데이터 중심의 기능 구현</h2>
-                <img src="./images/work/work_11/e2.png" alt="">
-                <div class="des">
-                    <strong>각 객체가 독립적으로 능력치를 입력 받고 전체 계산 로직에 사용될 수 있어야함</strong>
-
-                    <ul class="number_list">
-                        <li>선박, 부품을 입력의 역할만을 위한 하나의 컴포넌트로 구성</li>
-                        <li>전체적인 데이터를 관리하는 container 컴포넌트를 사용</li>
-                        <li>저장되어야 하는 데이터(능력치)와 동적 변경이 필요한 항목(index, isUse 등)을 분리하여 type 설정</li>
-                    </ul>
+                
+                <div class="point_cont">
+                    <h2>구조</h2>
+  
+                    <img src="./images/work/work_14/cart-frame.png" alt="">
+  
+                    <div class="des">
+                        <ul style="display:flex; flex-direction: column; gap: 10px;">
+                            <li>
+                                <strong>GNB</strong><br />
+                                라우트 그룹 (with-header) 공통 레이아웃 요소
+                            </li>
+                            <li>
+                                <strong>배송지 정보</strong><br />
+                                재사용 되지 않는 디자인 요소로 판단
+                            </li>
+                            <li>
+                                <strong>프로그레스 바</strong><br />
+                                - 카트 Store에서 유저가 체크한 실제 가격정보 필요
+                                - 상단에서 fixed 되는 기능 필요
+                            </li>
+                            <li>
+                                <strong>담은 상품 리스트</strong><br />
+                                - 공통 사용될 가능성이 있어 디자인 컴포넌트로 구성<br />
+                                - *디자인 컴포넌트는 외부 상태나 데이터 변화에 의존하지 않고 독립적으로 사용되도록 구성
+                            </li>
+                            <li>
+                                <strong>전체 선택 기능</strong><br />
+                                - 카트에서 <strong>Store의 체크 상태에 영향을 주고받으며</strong>, 현재 상태를 화면에 표시
+                            </li>
+                            <li>
+                                <strong>상품</strong><br />
+                                - 공통 사용될 가능성이 있어 디자인 컴포넌트로 구성 <br />
+                                - 상품의 체크 상태는 <strong>Store에 영향</strong>을 주지만 DB에 반영되지는 않음 (현재 Production과 동일)
+                            </li>
+                            <li>
+                                <strong>옵션</strong><br />
+                                - 상품에 1:N으로 연결되는 컴포넌트 <br />
+                                - 옵션의 <strong>수량 변경과 삭제는 Store에 영향</strong>을 주고 DB에 반영 (현재 Production과 동일)
+                            </li>
+                            <li>
+                                <strong>실시간 베스트 상품</strong><br />
+                                - <strong>상품 담기는 Store에 영향</strong>을 주고 DB에 반영 (현재 Production과 동일)<br />
+                                - <strong>캐러셀 컴포넌트 (재사용 확정 컴포넌트)</strong><br />
+                                - <strong>리스트 타입 컴포넌트 (재사용 확정 컴포넌트)</strong>
+                            </li>
+                            <li>
+                                <strong>최종 가격 표시</strong><br />
+                                - 사용자의 인터랙션(카트 담기, 옵션 수량 변경, 삭제, 체크 변경)에 따라 최신화된 상태를 화면에 표시<br />
+                                - store에서 필요한 데이터를 가져오도록 구성
+                            </li>
+                            <li>
+                                <strong>안내사항</strong><br />
+                                - <strong>재사용 확정 컴포넌트</strong><br />
+                                - 페이지의 상태와 데이터에 의존하지 않고 독립적으로 사용되도록 구성
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="shoot">기존 DOM 중심으로 기능을 구현했던 토이프로젝트들과 다르게 데이터 방식이 훨씬 효율적이라고 느낌</div> 
-            </div>
-            
-            <div class="point_cont">
-                <h2>공통 컴포넌트 구성</h2>
-                <div class="des">
-                    <strong>Input, Checkbox, Select, CommonSection 등의 재사용 가능한 공통요소 작업 연습</strong>
-
-                    <ul class="number_list">
-                        <li>토스 레퍼런스 참고하여 구상</li>
-                        <li>다른 페이지에서 사용하여 재사용성에 대한 구상</li>
-                    </ul>
+                
+                <div class="point_cont">
+                    <h2>CART Store</h2>
+                    <br>
+                    <div class="des">
+                        <strong>cartList: 현재 카트 데이터 (담은 상품 리스트)</strong>
+    
+                        <ul class="number_list">
+                            <li>유저별 현재 카트 데이터 정보</li>
+                            <li>DB와 완전 동일</li>
+                            <li>DB에 변동이 있는 API를 실행시 재실행 필요</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="des">
+                        <strong>checkList: 담은 리스트중 사용자가 체크한 상품</strong>
+    
+                        <ul class="number_list">
+                            <li>모든 상품의 default 값은 check: true</li>
+                            <li>유저의 체크 인터랙션에 따라 상태 관리</li>
+                            <li>화면의 체크 상태 조회</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="des">
+                        <strong>fetchCartData: 상품리스트와 체크리스트 최신화</strong>
+    
+                        <ul class="number_list">
+                            <li>카트 DB를 fetch하여 상품리스트에 SET</li>
+                            <li>체크리스트를 최신화하고 상품리스트와 동기화</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="des">
+                        <strong>getCartCost: 결제예정금액에 사용</strong>
+    
+                        <ul class="number_list">
+                            <li>체크 상태 변화에 따라 맞는 가격을 조회할 수 있도록 메소드로 사용</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="des">
+                        <strong>getIsCheckedAll: 전체 체크 여부를 가져오는 메소드</strong>
+    
+                        <ul class="number_list">
+                            <li>전체 선택 체크박스의 화면 표시에 사용</li>
+                            <li>이 값의 반대를 페이지에서 전체 선택의 전달 값으로 사용</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="des">
+                        <strong>getCheckedCount: 체크된 상품의 갯수를 가져오는 메소드</strong>
+    
+                        <ul class="number_list">
+                            <li>주문 건수 확인을 위해 사용</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="des">
+                        <strong>check: 유저의 상품 체크 메소드</strong>
+    
+                        <ul class="number_list">
+                            <li>체크한 상품을 적용하여 checkList를 최신화</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="des">
+                        <strong>checkAll: 유저의 상품 체크 메소드</strong>
+    
+                        <ul class="number_list">
+                            <li>전체체크 기능에 사용, checkList를 최신화</li>
+                        </ul>
+                    </div>
                 </div>
+                
             </div>
-            
-            <div class="point_cont">
-                <h2>가능한 함대 구성(선박 7개 조합)과 합산, 평균 능력치 표시</h2>
-                <img src="./images/work/work_11/e3.png" alt="">
-                <div class="des">
-                    <strong>N개의 선박중 최적의 평균 능력치를 가지는 7개의 선박을 가진 함대 조합을 추천하는 기능</strong>
-
-                    <ul class="number_list">
-                        <li>하나에 선박에는 장갑, 충각, 닻이 하나씩 장착되고 7개의 선박에 능력치의 평균을 계산</li>
-                        <li>선박에 조합 알고리즘으로 모든 함대 경우의 수를 표시</li>
-                        <li><strong>정렬 기능</strong></li>
-                        <li><strong>리스트 표시 개수 설정 기능</strong></li>
-                        <li>게임내에서 중요한 능력치인 내파, 돌파, 쇄빙에 대하여 <strong>최저 평균값</strong>을 만족할 수 있도록 필터링(예정)</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="point_cont">
-                <h2>부품의 수치 특성 표시, 정렬 기능</h2>
-                <img src="./images/work/work_11/e4.png" alt="">
-                <div class="des">
-                    <strong>동일 부품군을 비교하여 최대 효율 표시</strong>
-
-                    <ul class="number_list">
-                        <li>부품은 개별 능력치에 맞게 정렬하여 isUse가 true인 순서대로 7개 사용. 순서는 정렬기능으로 사용자가 변경이 가능</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="point_cont">
-                <h2>입력값 저장 기능</h2>
-                <img src="./images/work/work_11/e5.png" alt="">
-                <div class="des">
-                    <strong>입력 값이 많기 때문에 UX 편의성을 위한 저장 기능을 구현</strong>
-
-                    <ul class="number_list">
-                        <li>각 유저는 자신의 데이터만 사용하기 때문에 클라이언트 측에 데이터 저장</li>
-                        <li>쿠키, 로컬 스토리지 사용시 제한 용량에 의한 저장이슈로 IndexedDB 사용</li>
-                        <li>[사용자 요청]디바이스 변경이나 기록 삭제에 대비하여 Json 데이터 사용 가능하도록 추가</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-      `,
+          `,
       workImage: [],
       workTask: [
-        "입력과 계산 기능을 가진 실제 서비스를 구현하여 Next.js 학습 목적",
-        "동일 컴포넌트를 다른 부분에 최대한 재사용하여 기존 jQuery 토이프로젝트에 비해 코드 간단화 실현 목적",
-        "유저들의 실질적인 사용 편의성이 개선 되었는지 확인",
+        "마이그레이션된 구조를 구버전 코드에 구현",
+        "모던 프레임워크의 강점을 사용하여 레거시 코드의 문제점을 개선",
       ],
     },
     {
       id: 13,
-      title: "서비스 마이그레이션",
+      title: "쿠캣 게이미피케이션 마이그레이션",
       kind: "개인 프로젝트",
       summary:
         "런칭 운영중인 게이미피케이션 서비스 마이그레이션. next.js 학습 목적",
@@ -352,6 +332,230 @@ class ProjectList {
       workTask: [
         "react 동작 원리를 유사하게 구현하기 위해 레거시 개발 단계부터 구상",
         "마이그레이션 경험",
+      ],
+    },
+    {
+      id: 11,
+      title: "대항오 계산기",
+      kind: "개인 프로젝트",
+      summary:
+        "모바일 게임 [대항해시대 오리진] 편의 기능<br>next.js 학습 목적 토이프로젝트",
+      service:
+        "유저들에게 모바일 게임 [대항해시대 오리진]에 대한 데이터와 편의 기능을 제공하는 사이트 입니다.<br>next.js 학습을 위한 토이프로젝트 입니다.",
+      stack: [
+        { tag: "next", text: "Next.js 14" },
+        { tag: "fro", text: "typescript" },
+        { tag: "pub", text: "Tailwind CSS" },
+        { tag: "pub", text: "CSS" },
+      ],
+      link: "https://dho-cal.lifebefore.co.kr",
+      thumb: { image: "./images/work/work_11/bg_dho.png" },
+      contentPage: /* html */ `
+          <div class="wk_content">
+              <div class="gh_url">
+                  Production. <a target="_blank" href="https://dho-cal.lifebefore.co.kr">https://dho-cal.lifebefore.co.kr</a>
+                  <br>
+                  Github. <a target="_blank" href="https://github.com/ohsssuk/dho-cal">https://github.com/ohsssuk/dho-cal</a>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>컴포넌트 구조 설계</h2>
+                  <div class="des">
+                      <strong>디자인 패턴 레퍼런스를 참고하여 역할과 크기에 따른 분류와 재사용성을 염두에 두고 구성하도록 노력</strong>
+                      
+                      <div class="layout_view">
+                          <div class="box" style="border-color:#4b4b4b; width:100%;">
+                              <p class="box_description" style="color:#4b4b4b">
+                                  <strong>Fleet</strong><br>
+                                  page의 client component 부분에 해당하는 container 역할
+                              </p>
+                              
+                              <div class="box" style="border-color:#c12727; width:100%;">
+                                  <p class="box_description" style="color:#c12727">
+                                      <strong>FleetOutput</strong><br>
+                                      입력 받은 정보의 [계산, 계산 결과] 역할. 전체적인 비지니스 로직 포함
+                                  </p>
+                                  
+                                  <div class="box" style="border-color:#155b1d; width:100%;">
+                                      <p class="box_description" style="color:#155b1d">
+                                          <strong>CommonSection x n</strong><br>
+                                          공통 섹션의 디자인 요소
+                                      </p>
+                                      
+                                      <div class="box" style="border-color:#4b0a87; width:50%">
+                                          <p class="box_description" style="color:#4b0a87">
+                                              <strong>Select(정렬 필터)</strong><br>
+                                              기본 컴포넌트 : Select
+                                          </p>
+                                      </div>
+                                      
+                                      <div class="box" style="border-color:#c12727; width:100%;">
+                                          <p class="box_description" style="color:#c12727">
+                                              <strong>ResultTable</strong><br>
+                                              결과 단순 표시용 테이블
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="box" style="border-color:#2c53a9; width:100%;">
+                                  <p class="box_description" style="color:#2c53a9">
+                                      <strong>FleetInput</strong><br>
+                                      사용자의 [입력] 역할만 담당. 전체적인 비지니스 로직 포함
+                                  </p>
+                                  
+                                  <div class="box" style="border-color:#155b1d; width:100%;">
+                                      <p class="box_description" style="color:#155b1d">
+                                          <strong>CommonSection x n</strong><br>
+                                          공통 섹션의 디자인 요소
+                                      </p>
+                                      
+                                      <div class="box" style="border-color:#4b0a87; width:50%">
+                                          <p class="box_description" style="color:#4b0a87">
+                                              <strong>Select(정렬 필터)</strong><br>
+                                              기본 컴포넌트 : Select
+                                          </p>
+                                      </div>
+                                      
+                                      <div class="box" style="border-color:#2c53a9; width:100%;">
+                                          <p class="box_description" style="color:#2c53a9">
+                                              <strong>ShipItemList</strong><br>
+                                              선박&부품 공통 컴포넌트의 List
+                                          </p>
+                                          
+                                      
+                                          <div class="box" style="border-color:#2c53a9; width:100%;">
+                                              <p class="box_description" style="color:#2c53a9">
+                                                  <strong>ShipItem x n</strong><br>
+                                                  선박&부품 공통 컴포넌트
+                                              </p>
+                                          
+                                              <div class="box" style="border-color:#4b0a87; width:50%">
+                                                  <p class="box_description" style="color:#4b0a87">
+                                                      <strong>Checkbox(사용 여부 선택)</strong><br>
+                                                      기본 컴포넌트 : Checkbox
+                                                  </p>
+                                              </div>
+                                              <div class="box" style="border-color:#4b0a87; width:50%">
+                                                  <p class="box_description" style="color:#4b0a87">
+                                                      <strong>Input(수치 입력)</strong><br>
+                                                      기본 컴포넌트 : Input
+                                                  </p>
+                                              </div>
+                                          </div>
+                                          
+                                          <div class="box" style="border-color:#4b0a87; width:50%">
+                                              <p class="box_description" style="color:#4b0a87">
+                                                  <strong>Button(Add ShipItem)</strong><br>
+                                                  기본 컴포넌트 : Button
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                      
+                                  <div class="box" style="border-color:#2c53a9; width:100%;">
+                                      <p class="box_description" style="color:#2c53a9">
+                                          <strong>BottomMenuBar</strong><br>
+                                          입력 받은 정보 전체를 계산, 저장, 초기화 하는 CTA 영역<br>
+                                          FleetInput에서 전달한 함수를 받아서 사용
+                                      </p>
+                                  </div>
+                                      
+                                  <div class="box" style="border:1px dashed #2c53a9; width:100%;">
+                                      <p class="box_description" style="color:#2c53a9">
+                                          <strong>Popup(입력 데이터 json 저장, 적용 역할)</strong><br>
+                                          현재 컨테이너에서 사용할 Popup
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <ul class="number_list">
+                          <li>계산과 사용자 인터렉션에 관련된 <strong>비지니스 로직은 FleetInput, FleetOutput의 컨테이너에서만 관리</strong>하도록 설계<br>- 목적 : MVC 패턴의 Controller 역할</li>
+                          <li>기본 컴포넌트는 재사용이 가능하도록 고정적이지 않고 유연한 속성을 갖도록 설계<br>- 목적 : 디자인 시스템으로 재사용성 강화</li>
+                          <li>반복되는 디자인 요소의 표시 역할만 하는 디자인 컴포넌트 추가(CommonSection)<br>- 목적 : 디자인 시스템으로 불필요한 반복 제거</li>
+                          <li>List와 ListItem은 컨테이너에서 전달한 데이터로 단순히 화면을 render하는 목적만을 위해 사용하도록 설계<br>- 목적 : 역할별로 화면 구성을 위한 컴포넌트를 분리하여 유지/보수 효율 증가</li>
+                          <li>사용자 인터렉션이 일어나는 Fleet을 제외한 page의 다른 부분들은 서버 컴포넌트로 사용<br>- 목적 : <strong>검색 엔진 최적화 (SEO)</strong> 데이터 수집</li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>데이터 중심의 기능 구현</h2>
+                  <img src="./images/work/work_11/e2.png" alt="">
+                  <div class="des">
+                      <strong>각 객체가 독립적으로 능력치를 입력 받고 전체 계산 로직에 사용될 수 있어야함</strong>
+  
+                      <ul class="number_list">
+                          <li>선박, 부품을 입력의 역할만을 위한 하나의 컴포넌트로 구성</li>
+                          <li>전체적인 데이터를 관리하는 container 컴포넌트를 사용</li>
+                          <li>저장되어야 하는 데이터(능력치)와 동적 변경이 필요한 항목(index, isUse 등)을 분리하여 type 설정</li>
+                      </ul>
+                  </div>
+                  <div class="shoot">기존 DOM 중심으로 기능을 구현했던 토이프로젝트들과 다르게 데이터 방식이 훨씬 효율적이라고 느낌</div> 
+              </div>
+              
+              <div class="point_cont">
+                  <h2>공통 컴포넌트 구성</h2>
+                  <div class="des">
+                      <strong>Input, Checkbox, Select, CommonSection 등의 재사용 가능한 공통요소 작업 연습</strong>
+  
+                      <ul class="number_list">
+                          <li>토스 레퍼런스 참고하여 구상</li>
+                          <li>다른 페이지에서 사용하여 재사용성에 대한 구상</li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>가능한 함대 구성(선박 7개 조합)과 합산, 평균 능력치 표시</h2>
+                  <img src="./images/work/work_11/e3.png" alt="">
+                  <div class="des">
+                      <strong>N개의 선박중 최적의 평균 능력치를 가지는 7개의 선박을 가진 함대 조합을 추천하는 기능</strong>
+  
+                      <ul class="number_list">
+                          <li>하나에 선박에는 장갑, 충각, 닻이 하나씩 장착되고 7개의 선박에 능력치의 평균을 계산</li>
+                          <li>선박에 조합 알고리즘으로 모든 함대 경우의 수를 표시</li>
+                          <li><strong>정렬 기능</strong></li>
+                          <li><strong>리스트 표시 개수 설정 기능</strong></li>
+                          <li>게임내에서 중요한 능력치인 내파, 돌파, 쇄빙에 대하여 <strong>최저 평균값</strong>을 만족할 수 있도록 필터링(예정)</li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>부품의 수치 특성 표시, 정렬 기능</h2>
+                  <img src="./images/work/work_11/e4.png" alt="">
+                  <div class="des">
+                      <strong>동일 부품군을 비교하여 최대 효율 표시</strong>
+  
+                      <ul class="number_list">
+                          <li>부품은 개별 능력치에 맞게 정렬하여 isUse가 true인 순서대로 7개 사용. 순서는 정렬기능으로 사용자가 변경이 가능</li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <div class="point_cont">
+                  <h2>입력값 저장 기능</h2>
+                  <img src="./images/work/work_11/e5.png" alt="">
+                  <div class="des">
+                      <strong>입력 값이 많기 때문에 UX 편의성을 위한 저장 기능을 구현</strong>
+  
+                      <ul class="number_list">
+                          <li>각 유저는 자신의 데이터만 사용하기 때문에 클라이언트 측에 데이터 저장</li>
+                          <li>쿠키, 로컬 스토리지 사용시 제한 용량에 의한 저장이슈로 IndexedDB 사용</li>
+                          <li>[사용자 요청]디바이스 변경이나 기록 삭제에 대비하여 Json 데이터 사용 가능하도록 추가</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        `,
+      workImage: [],
+      workTask: [
+        "입력과 계산 기능을 가진 실제 서비스를 구현하여 Next.js 학습 목적",
+        "동일 컴포넌트를 다른 부분에 최대한 재사용하여 기존 jQuery 토이프로젝트에 비해 코드 간단화 실현 목적",
+        "유저들의 실질적인 사용 편의성이 개선 되었는지 확인",
       ],
     },
     {
